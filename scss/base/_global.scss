@@ -1,0 +1,284 @@
+html {
+	font-size: 62.5%; // (i.e. 1.4rem == 14px) 
+}
+
+body {
+	background-color: white;
+	font-family: $opensans;
+	color: black;
+	font-size: 1.4rem;
+}
+
+%clear {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.content {
+	position: relative;
+	//padding-top: $header-height + 40px;
+}
+
+.inner {
+	width: $wrapper-width;
+	max-width: $max-width;
+	margin: 0 auto;
+	display: block;
+}
+
+.fa {
+	font-family: $fontawesome;
+}
+
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: transparentize($black, 0.5);
+	top: 0;
+	z-index: 1;
+}
+
+ul.inline {
+	list-style: none;
+	li { 
+		display: inline-block;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $bangers;
+	font-weight: 400;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+
+input, textarea, button, select {
+	@include appearance(none);
+	@include border-radius;
+	font-family: $opensans;
+}
+
+input[type="radio"] {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+select {
+	padding-right: $m-space !important;
+	background: url('../../img/arrow.png') no-repeat right $white;
+	background-size: contain;
+}
+
+
+button {
+	@include transition(all, 200ms, linear);
+	@include box-shadow(0, 2px, 5px, rgba(0, 0, 0, 0.26));
+	background-color: $primary-color;
+	color: $black;
+	font-weight: bold;
+	cursor: pointer;
+	padding: $s-space $m-space;
+	font-size: 1.8rem;
+	position: relative;
+	overflow: hidden;
+	
+	&:after {
+		background: #fff;
+		content: "";
+		height: 155px;
+		left: -75px;
+		opacity: .5;
+		position: absolute;
+		top: -50px;
+		transform: rotate(35deg);
+		transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
+		width: 50px;
+	}
+
+	&:hover {
+		padding-left: $l-space;
+		padding-right: $l-space;
+		
+		&:after {
+			transition-delay: 200ms;
+			left: 120%;
+			//transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+		}
+	}
+	
+
+	&.clear {
+		border: 1px solid $link-color;
+		background-color: transparent;
+		color: $link-color;
+		&:hover {
+			background: $link-color;
+			color: $white;
+			opacity: 1;
+		}
+	}
+	
+	&.pulse {
+		animation: pulse 1s infinite;
+		&:hover {
+
+			background-color: $primary-color;
+			animation: none;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $primary-color;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+.logo {
+	font-family: $bangers;
+	font-size: 4.8rem;
+	letter-spacing: 2px;
+	color: white;
+	span { color: $primary-color; }
+	
+	&:hover {
+		color: white;
+		span { color: $primary-color; }
+	}
+}
+
+
+.block {
+	padding: $m-space 0;
+	text-align: center;
+	color: white;
+
+	h1 { font-size: 4.2rem; }
+	h2 { font-size: 3.2rem; }
+	h3 { font-size: 2.8rem;	}
+	h4 {
+		font-family: $francois;
+		font-size: 2.4rem;
+		padding-bottom: $xs-space;
+	}
+	p {
+		font-size: 1.8rem;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+form {
+	.split-fields-half {
+		@extend %clear;
+		width: 50%;
+		margin: 0 auto;
+		
+		.field {
+			width: calc(50% - #{$xs-space});
+			float: left;
+			text-align: left;
+			&:first-of-type { margin-right: $s-space; }
+			
+			input, textarea, label {
+				width: 100%;
+			}
+		}
+	}
+	
+	label, input, textarea {
+		width: 50%;
+		display: block;
+		padding: $xs-space;
+		margin: 0 auto;
+		font-size: 1.6rem;
+	}
+	
+	label {
+		text-align: left;
+		padding: 0;
+		margin-top: $s-space;
+		margin-bottom: $xs-space;
+		&.required::after {
+				content: "*";
+				color: red;
+		}
+	}
+
+	input[type="text"] {
+
+	}
+
+	textarea {
+		min-height: 120px;
+	}
+
+	input[type="submit"], button {
+		margin-top: $m-space;
+		font-weight: bold;
+		display: inline-block;
+		cursor: pointer;
+		transition: all 300ms ease;
+	}
+	
+	
+	input[type="submit"] {
+		width: 20%;
+		background-color: transparent;
+		border: 3px solid white;
+		color: white;
+
+		&:hover {
+			background-color: white;
+			color: $secondary-color;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

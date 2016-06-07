@@ -1,0 +1,10 @@
+@keyframes pulse {
+	0% { background-color: #FFB300; }
+	20% { background-color: $primary-color; }
+	100% { background-color: #FFB300; }
+}
+
+@keyframes reel {
+	0% { top: -$m-space; }
+	100% { top: -$reel-size - $m-space; }
+}

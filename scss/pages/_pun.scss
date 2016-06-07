@@ -1,0 +1,46 @@
+.pun {
+	width: 100%;
+	background-color: $gray;
+	
+	.inner {
+		position: relative;
+		min-height: calc(100vh - (61px + 99px));
+	}
+	
+	
+	.valign {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	h1 {
+		text-align: center;
+		font-size: 3.8rem;
+		padding-bottom: $m-space;
+		font-family: $francois;
+	}
+	
+	section {
+		width: 100%;
+		background-color: white;
+		padding: $m-space;
+		
+		h2 {
+			font-family: $opensans;
+		}
+		
+		p {
+			display: block;
+			padding-left: $s-space;
+			margin: $xs-space 0;
+		}
+		
+		em {
+			width: 100%;
+			display: block;
+			text-align: right;
+		}
+	}
+}

@@ -1,0 +1,222 @@
+.hero {
+	width: 100%;
+	height: auto;
+	min-height: 400px;
+	padding: $l-space 0;
+	background-color: $primary-color;
+	background-image: url(../../img/home-bg.jpg);
+	background-size: cover;
+	background-position: bottom;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	
+	.inner {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.dot-overlay {
+		background-image: url('../img/dots.png');
+		background-size: 2%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.4;
+	}
+	
+	h1 {
+		background-color: white;
+		padding: $xs-space;
+		font-size: 5.6rem;
+		display: block;
+	}
+	
+	a.c2a {
+		font-family: $bangers;
+		background-color: black;
+		color: $primary-color;
+		display: inline-block;
+		padding: $xs-space $s-space;
+		font-size: 4.2rem;
+		margin-top: $m-space;
+		border: 5px solid black;
+		
+		&:hover {
+			background-color: $primary-color;
+			color: black;
+			text-decoration: none;
+		}
+	}
+	
+	.hero-left, .hero-right {
+		position: relative;
+		z-index: 1;
+		font-size: 0;
+	}
+	
+	.hero-left {
+		
+	}
+	
+	.hero-right {
+		text-align: right;
+	}
+	
+	img.book {
+		width: 80%;
+		position: relative;
+		z-index: 2;
+		transform:rotate(-10deg);
+		border: 5px solid black;
+		position: absolute;
+		width: 300px;
+		top: -50%;
+	}
+}
+
+.subscribe {
+	min-height: 250px;
+	background-color: $black;
+	overflow: hidden;
+	position: relative;
+
+	.message {
+		color: #24CA24;
+		position: relative;
+		z-index: 10;
+		line-height: 200px;
+		font-size: 2.2rem;
+	}
+	
+	.gradient-overlay {
+		width: 100%;
+		height: $xl-space;
+		position: absolute;
+		left: 0; right: 0;
+		z-index: 1;
+
+		&--top {
+			background: -webkit-linear-gradient($black, transparent);
+			background: -o-linear-gradient($black, transparent);
+			background: linear-gradient($black, transparent);
+			top: 0;
+		}
+
+		&--bottom {
+			background: -webkit-linear-gradient(transparent, $black);
+			background: -o-linear-gradient(transparent, $black);
+			background: linear-gradient(transparent, $black);
+			bottom: 0;
+		}
+	}
+	
+	h2 {
+		font-size: 4.2rem;
+	}
+	
+	h2 + span {
+		padding: $xs-space 0 $s-space 0;
+		display: block;
+		font-size: 1.6rem;
+	}
+
+	.subscribe__frame {
+		@extend %clear;
+		position: relative;
+		
+		.subscribe__left { 
+			width: 30%;
+			padding-right: $m-space;
+			float: left;
+			position: relative;
+		}
+		.subscribe__right { 
+			width: 70%;
+			float: right;
+			position: relative;
+			z-index: 10;
+		}
+	}
+	
+	.kindle-reel {
+		background: url('../../img/kindle-fire.png');
+		background-repeat: repeat-y;
+		position: absolute;
+		left: 0;
+		top: -$m-space;
+		height: $reel-size * 2;
+		width: 100%;
+		animation: reel 10s linear infinite;
+	}
+	
+	.split-fields-half, label, input {
+		width: 100%;
+	}
+
+	.step {
+		@extend %clear;
+		width: 100%;
+		margin: 0 auto $s-space auto;
+		
+		&:last-of-type {
+			padding-bottom: $m-space;
+			border-bottom: 2px dashed $primary-color;
+		}
+		
+		.step__circle {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			background-color: $primary-color;
+			float: left;
+			border-radius: 50%;
+			font-family: $bangers;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: $black;
+			cursor: default;
+		}
+		
+		.step__content {
+			width: calc(100% - 50px - #{$s-space});
+			float: right;
+			text-align: left;
+			line-height: 1.2;
+			margin-top: 15px;
+		}
+		
+		h3 {
+			font-size: 2.4rem;
+			font-family: $francois;
+		}
+		
+	}
+}
+
+.contact {
+	background-color: $secondary-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

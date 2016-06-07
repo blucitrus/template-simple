@@ -1,0 +1,53 @@
+header {
+	width: 100%;
+	height: auto;
+	background-color: black;
+	color: white;
+	padding-top: $xs-space;
+	position: relative;
+	
+	.inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.nav {
+		font-family: $francois;
+		
+		li {
+			&:not(:first-of-type) {
+				margin-left: $s-space;
+			}
+			
+			/* &:last-of-type {
+				border: 2px solid $primary-color;
+				padding: 0 $xs-space;
+				a {	color: $primary-color; }
+				
+				&:hover {
+					background-color: $primary-color;
+					a { color: $black; }
+				}
+			} */
+		}
+		a {
+			color: white;
+			font-size: 2.4rem;
+
+			&:hover, &.active {
+				color: $primary-color;
+			}
+		}
+	}
+	&::after {
+		content: "";
+		width: 100%;
+		height: $texture-height;
+		background-image: url('../img/roughpattern-black.png');
+		position: absolute;
+		bottom: -$texture-height;
+		display: block;
+		z-index: 5;
+	}
+}
